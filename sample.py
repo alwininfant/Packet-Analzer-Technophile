@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import tkinter as tk
 from tkinter import ttk
 
@@ -28,7 +22,7 @@ heading_frame = tk.Frame(root, bd=2, relief=tk.SOLID, bg="white", highlightbackg
 heading_frame.grid(row=0, column=0, columnspan=2, padx=10, pady=10, sticky=tk.W+tk.E)
 
 # Add the heading label inside the heading frame
-heading_label = tk.Label(heading_frame, text="Packet Capture and Analyzing Tool", font=("Arial", 16))
+heading_label = tk.Label(heading_frame, text="Packet Analyzer Tool", font=("Arial", 16))
 heading_label.pack(padx=10, pady=10)
 
 # Configure columns to expand horizontally
@@ -40,7 +34,7 @@ button_frame = tk.Frame(root, bd=2, relief=tk.SOLID)
 button_frame.grid(row=1, column=0, columnspan=2, padx=10, pady=(0, 10), sticky=tk.W+tk.E)
 
 # Define the names for the first 5 buttons
-button_texts = ["Start Capture", "Save Into File", "Open the File", "Analyse the Packets", "See the Vulnerabilities"]
+button_texts = ["Start Capture", "Save Into File", "Open the File", "Analyse the Packets", ]
 
 # Create five buttons with the specified names and add them to the button frame
 for i, text in enumerate(button_texts):
@@ -60,7 +54,7 @@ vulnerability_frame = tk.Frame(root, bd=2, relief=tk.SOLID)
 vulnerability_frame.grid(row=3, column=0, padx=10, pady=(0, 10), sticky=tk.W+tk.E)
 
 # Create a label for the vulnerability area
-vulnerability_label = tk.Label(vulnerability_frame, text="Vulnerability", font=("Arial", 12))
+vulnerability_label = tk.Label(vulnerability_frame, text="Threats", font=("Arial", 12))
 vulnerability_label.grid(row=0, column=0, padx=10, pady=5, sticky=tk.NW)
 
 # Add Text widget for displaying vulnerability output
@@ -103,9 +97,9 @@ statistic_output.grid(row=1, column=0, padx=10, pady=5, sticky=tk.W)
 
 # Options for statistic dropdown
 statistic_options = [
-    "Option 1",
-    "Option 2",
-    "Option 3"
+    "Pie Chart",
+    "Bar Graph"
+    
 ]
 
 # Variable to store selected statistic
@@ -122,10 +116,3 @@ statistic_dropdown.bind("<<ComboboxSelected>>", statistic_selected)
 root.rowconfigure(3, weight=1)
 
 root.mainloop()
-
-
-# In[ ]:
-
-
-
-
